@@ -1,0 +1,8 @@
+<div class="form-group">
+    <label for="{{htmlFor}}">{{label}}</label>
+    
+        <ng-content></ng-content>
+
+    <small class="form-text text-danger" 
+        *ngIf="hasError()" [innerHtml]="getMessage()"></small>
+</div>

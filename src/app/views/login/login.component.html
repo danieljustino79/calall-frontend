@@ -1,0 +1,20 @@
+<div class="row justify-content-md-center">
+    <div class="col-sm-6">
+        <h1>{{titleFormLogin}}</h1>        
+        <div class="card">
+            <div class="card-body">
+                <form novalidate [formGroup]="loginForm">
+                    <app-form-group-required-pattern label="Email" htmlFor="txtEmail" >
+                        <input type="email" class="form-control" placeholder="{{placeholderEmail}}" id="txtEmail" 
+                            formControlName="email"/>
+                    </app-form-group-required-pattern>
+                    <app-form-group-required-minlength label="{{labelPassword}}" htmlFor="txtPassword" termMinlength="{{minlength}}" >
+                        <input type="password" class="form-control" placeholder="{{placeholderPassword}}" id="txtPassword" 
+                            formControlName="password"/>
+                    </app-form-group-required-minlength>
+                    <button type="button" class="btn btn-primary float-right" (click)="login(loginForm)">{{buttonAccess}}</button>
+                </form>
+            </div>
+        </div>
+    </div>    
+</div>
